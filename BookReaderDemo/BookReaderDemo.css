@@ -11,7 +11,7 @@ body {
 }
 
 .BookReader {
-    width:800px;
+    width:100%;
     height: 600px;
     overflow: hidden;
     margin: 20px;
