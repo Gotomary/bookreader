@@ -85,7 +85,7 @@ var options = {
   bookUrlText:"How to pray the rosary",
   bookUrlTitle: "How to pray the rosary",
   // thumbnail is optional, but it is used in the info dialog
-  thumbnail: "https://gotomary.github.io/bookreader/books/oremus/01.jpg",
+  thumbnail: "https://gotomary.github.io/bookreader/books/oremus/page01.jpg",
   // Metadata is optional, but it is used in the info dialog
   metadata: [
     {label: "Title", value: "How to pray the rosary"},
