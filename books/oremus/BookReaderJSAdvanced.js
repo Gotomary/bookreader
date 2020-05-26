@@ -26,10 +26,10 @@ var options = {
       // reduce and rotate are ignored in this simple implementation, but we
       // could e.g. look at reduce and load images from a different directory
       // or pass the information to an image server
-      var leafStr = '00';
+      var leafStr = "00";
       var imgStr = (index+1).toString();
       var re = new RegExp("0{"+imgStr.length+"}$");
-      var url = 'https://gotomary.github.io/bookreader/books/oremus/page'+leafStr.replace(re, imgStr) + '.jpg';
+      var url = "https://gotomary.github.io/bookreader/books/oremus/page"+leafStr.replace(re, imgStr) + ".jpg";
       return url;
   },
 
@@ -82,15 +82,15 @@ var options = {
   // Book title and the URL used for the book title link
   bookTitle: 'How to pray the rosary',
   bookUrl: 'ttps://gotomary.github.io/bookreader/books/oremus/index.html',
-  bookUrlText:'Back to Demos',
-  bookUrlTitle: 'How to pray the rosary',
+  bookUrlText:"How to pray the rosary",
+  bookUrlTitle: "How to pray the rosary",
   // thumbnail is optional, but it is used in the info dialog
-  thumbnail: 'https://gotomary.github.io/bookreader/books/oremus/01.jpg',
+  thumbnail: "https://gotomary.github.io/bookreader/books/oremus/01.jpg",
   // Metadata is optional, but it is used in the info dialog
   metadata: [
-    {label: 'Title', value: 'How to pray the rosary'},
-    {label: 'Author', value: 'Go to Mary'},
-    {label: 'Demo Info', value: 'How to pray the rosary.'},
+    {label: 'Title', value: "How to pray the rosary"},
+    {label: 'Author', value: "Go to Mary"},
+    {label: 'Demo Info', value: "How to pray the rosary."},
   ],
   // This toggles the mobile drawer (not shown in 'embed' mode)
   enableMobileNav: false,
