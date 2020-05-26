@@ -26,19 +26,19 @@ var options = {
       // reduce and rotate are ignored in this simple implementation, but we
       // could e.g. look at reduce and load images from a different directory
       // or pass the information to an image server
-      var leafStr = "00";
+      var leafStr = '0';
       var imgStr = (index+1).toString();
       var re = new RegExp("0{"+imgStr.length+"}$");
-      var url = "https://gotomary.github.io/bookreader/books/oremus/page"+leafStr.replace(re, imgStr) + ".jpg";
+      var url = 'https://gotomary.github.io/bookreader/books/oremus/page'+leafStr.replace(re, imgStr) + '.jpg';
       return url;
   },
 
   // Return which side, left or right, that a given page should be displayed on
   getPageSide: function(index) {
       if (0 == (index & 0x1)) {
-          return "R";
+          return 'R';
       } else {
-          return "L";
+          return 'L';
       }
   },
 
@@ -47,9 +47,9 @@ var options = {
   // null if there is no facing page or the index is invalid.
   getSpreadIndices: function(pindex) {
       var spreadIndices = [null, null];
-      if ("rl" == this.pageProgression) {
+      if ('rl' == this.pageProgression) {
           // Right to Left
-          if (this.getPageSide(pindex) == "R" {
+          if (this.getPageSide(pindex) == 'R') {
               spreadIndices[1] = pindex;
               spreadIndices[0] = pindex + 1;
           } else {
@@ -59,7 +59,7 @@ var options = {
           }
       } else {
           // Left to right
-          if (this.getPageSide(pindex) == "L") {
+          if (this.getPageSide(pindex) == 'L') {
               spreadIndices[0] = pindex;
               spreadIndices[1] = pindex + 1;
           } else {
@@ -80,35 +80,37 @@ var options = {
   },
 
   // Book title and the URL used for the book title link
-  bookTitle: "How to pray the rosary",
-  bookUrl: "https://gotomary.github.io/bookreader/books/oremus/index.html",
-  bookUrlText:"How to pray the rosary",
-  bookUrlTitle: "How to pray the rosary",
+  bookTitle: 'BookReader Advanced Demo',
+  bookUrl: '/BookReaderDemo/index.html',
+  bookUrlText: 'Back to Demos',
+  bookUrlTitle: 'This is the book URL title',
   // thumbnail is optional, but it is used in the info dialog
-  thumbnail: "https://gotomary.github.io/bookreader/books/oremus/page01.jpg",
+  thumbnail: 'https://gotomary.github.io/bookreader/books/oremus/page01.jpg',
   // Metadata is optional, but it is used in the info dialog
   metadata: [
-    {label: "Title", value: "How to pray the rosary"},
-    {label: "Author", value: "Go to Mary"},
-    {label: "Demo Info", value: "How to pray the rosary."},
+    {label: 'Title', value: 'Open Library BookReader Presentation'},
+    {label: 'Author', value: 'Internet Archive'},
+    {label: 'Demo Info', value: 'This demo shows how one could use BookReader with their own content.'},
   ],
-  // This toggles the mobile drawer (not shown in "embed" mode)
-  enableMobileNav: true,
-  mobileNavTitle: "How to pray the rosary",
+  // This toggles the mobile drawer (not shown in 'embed' mode)
+  enableMobileNav: false,
+  mobileNavTitle: 'BookReader demo',
 
   // Override the path used to find UI images
-  imagesBaseURL: "https://gotomary.github.io/bookreader/BookReader/images/"
+  imagesBaseURL: '../BookReader/images/',
 
-  getEmbedCode: function(frameWidth, frameHeight, viewParams) {
-       return "<iframe src='" + this.getEmbedURL(viewParams) + "' width='" + frameWidth + "' height='" + frameHeight + "' frameborder='0' ></iframe>";
-        
-
-  },
+   br.getEmbedURL = function(viewParams) {
+            var url = <?php echo json_encode(WEB_ROOT) /* TODO Use the item url. */; ?>;
+            return url;
+        }
+        br.getEmbedCode = function(frameWidth, frameHeight, viewParams) {
+            return "<iframe src='" + this.getEmbedURL(viewParams) + "' width='" + frameWidth + "' height='" + frameHeight + "' frameborder='0' ></iframe>";
+        }
 
   // Note previously the UI param was used for mobile, but it's going to be responsive
   // embed === iframe
 
-  ui: "full", // embed, full (responsive)
+  ui: 'full', // embed, full (responsive)
 
 };
 var br = new BookReader(options);
