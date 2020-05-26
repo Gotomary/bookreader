@@ -28,8 +28,8 @@ var options = {
       // or pass the information to an image server
       var leafStr = '0';
       var imgStr = (index+1).toString();
-      var re = new RegExp("{"+imgStr.length+"}$");
-      var url = 'https://gotomary.github.io/bookreader/books/oremus/How%20to%20pray%20the%20Rosary2_Page_'+leafStr.replace(re, imgStr) + '.jpg';
+      var re = new RegExp("0{"+imgStr.length+"}$");
+      var url = 'https://gotomary.github.io/bookreader/books/oremus/'+leafStr.replace(re, imgStr) + '.jpg';
       return url;
   },
 
@@ -85,7 +85,7 @@ var options = {
   bookUrlText:'Back to Demos',
   bookUrlTitle: 'How to pray the rosary',
   // thumbnail is optional, but it is used in the info dialog
-  thumbnail: 'https://gotomary.github.io/bookreader/books/oremus/How%20to%20pray%20the%20Rosary2_Page_1.jpg',
+  thumbnail: 'https://gotomary.github.io/bookreader/books/oremus/01.jpg',
   // Metadata is optional, but it is used in the info dialog
   metadata: [
     {label: 'Title', value: 'How to pray the rosary'},
