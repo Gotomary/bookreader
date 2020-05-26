@@ -7,7 +7,7 @@ body {
 
 /* Hide print and embed functionality */
 .BRtoolbar .embed, .print {
-    display: none;
+    display: all;
 }
 
 .BookReader {
