@@ -29,7 +29,7 @@ var options = {
       var leafStr = '00';
       var imgStr = (index+1).toString();
       var re = new RegExp("0{"+imgStr.length+"}$");
-      var url = 'https://gotomary.github.io/bookreader/books/oremus/'+leafStr.replace(re, imgStr) + '.jpg';
+      var url = 'https://gotomary.github.io/bookreader/books/oremus/page'+leafStr.replace(re, imgStr) + '.jpg';
       return url;
   },
 
