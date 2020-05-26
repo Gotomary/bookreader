@@ -7,7 +7,7 @@ body {
 
 /* Hide print and embed functionality */
 .BRtoolbar .embed, .print {
-    display: all;
+    display: none;
 }
 
 .BookReader {
@@ -17,7 +17,7 @@ body {
     margin: 20px;
 }
 
-@media only screen and (max-width: 10000px) {
+@media only screen and (max-width: 799px) {
     body.BRbodyMobileNavEnabled {
         margin: 0;
         width: 100%;
