@@ -28,7 +28,7 @@ var options = {
       // or pass the information to an image server
       var leafStr = '0';
       var imgStr = (index+1).toString();
-      var re = new RegExp("0{"+imgStr.length+"}$");
+      var re = new RegExp("{"+imgStr.length+"}$");
       var url = 'https://gotomary.github.io/bookreader/books/oremus/How%20to%20pray%20the%20Rosary2_Page_'+leafStr.replace(re, imgStr) + '.jpg';
       return url;
   },
