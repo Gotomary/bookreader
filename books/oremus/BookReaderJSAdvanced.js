@@ -93,11 +93,11 @@ var options = {
     {label: 'Demo Info', value: "How to pray the rosary."},
   ],
   // This toggles the mobile drawer (not shown in 'embed' mode)
-  enableMobileNav: false,
+  enableMobileNav: true,
   mobileNavTitle: 'BookReader demo',
 
   // Override the path used to find UI images
-  imagesBaseURL: '../BookReader/images/',
+  imagesBaseURL: 'https://gotomary.github.io/bookreader/BookReader/images/',
 
   getEmbedCode: function(frameWidth, frameHeight, viewParams) {
        return "<iframe src='" + this.getEmbedURL(viewParams) + "' width='" + frameWidth + "' height='" + frameHeight + "' frameborder='0' ></iframe>";
