@@ -97,7 +97,7 @@ var options = {
   mobileNavTitle: "How to pray the rosary",
 
   // Override the path used to find UI images
-  imagesBaseURL: "ttps://gotomary.github.io/bookreader/BookReader/images/"
+  imagesBaseURL: "https://gotomary.github.io/bookreader/BookReader/images/"
 
   getEmbedCode: function(frameWidth, frameHeight, viewParams) {
        return "<iframe src='" + this.getEmbedURL(viewParams) + "' width='" + frameWidth + "' height='" + frameHeight + "' frameborder='0' ></iframe>";
